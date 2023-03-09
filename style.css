@@ -9,6 +9,7 @@
   transform: scale(0);
   transition: transform 0.5s;
   background-color: beige;
+  z-index: 5;
 }
 
 .carrousel--ouvrir {
