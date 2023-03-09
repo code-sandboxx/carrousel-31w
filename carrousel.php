@@ -29,7 +29,7 @@ function carrousel_enqueue(){
                     true);
 }
 
-add_action('wp_enqueue_scripts', 'carrousel_enqueue');
+add_action('wp_enqueue_scripts', 'carrousel_enqueue'); 
 
 function creation_carrousel(){
 
@@ -41,4 +41,4 @@ function creation_carrousel(){
         </div>';
 }    
 
-add_shortcode('carrousel', 'creation_carrousel'); // ajouter [carrousel] dans le texte d'article Ma gallerie accueil
+add_shortcode('carrousel', 'creation_carrousel'); // ajouter [carrousel] dans le texte d'article Ma gallerie accueil 
