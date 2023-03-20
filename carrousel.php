@@ -14,7 +14,7 @@ Description: Permet d'afficher dans une boite modale les images d'une galerie av
 
 function carrousel_enqueue(){
 
-    $version_css = filemtime(plugin_dir_path(__FILE__) . "style.css");
+    $version_css = filemtime(plugin_dir_path(__FILE__) . "style.css"); // filemtime - Lit la date à laquelle le fichier a été modifié pour la dernière fois.
     $version_js = filemtime(plugin_dir_path(__FILE__) . "js/carrousel.js");
 
     wp_enqueue_style('em_plugin_carrousel_css',

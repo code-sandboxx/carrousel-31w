@@ -1,7 +1,6 @@
 (function(){
     // fonction IFEE
     console.log('début du carrousel');
-
     let bouton__ouvrir = document.querySelector('.bouton__ouvrir');
     let elmCarrousel  = document.querySelector('.carrousel');
     let elmBouton__x = document.querySelector('.bouton__x');
@@ -12,25 +11,28 @@
     let elmCarrousel__form = document.querySelector('.carrousel__form');// conteneur de radio bouton
     console.log(elmGalerie__img.length)
 
-    
-
     bouton__ouvrir.addEventListener('mousedown', function(){
         console.log('boite modale');
-        elmCarrousel.classList.add('carrousel--ouvrir')
-        ajouter_carrousel();
+        elmCarrousel.classList.add('carrousel--ouvrir')   
+        if(elmCarrousel__form .length == 0){     
+            ajouter_carrousel();       
+        }    
+        bouton__ouvrir.style.visibility = "hidden";
     })
 
     elmBouton__x.addEventListener('mousedown', function(){
         console.log('boite modale');
         elmCarrousel.classList.remove('carrousel--ouvrir')
+        bouton__ouvrir.style.visibility = "visible";
     })
 
-    function ajouter_carrousel(params) {   
-        for (const elmImg of elmGalerie__img) {
-            ajouter_img(elmImg) // ajoute l'image dans le carrousel
-            ajouter_radio() // ajoute des radio bouton dans carrousel__form
-        }
+    function ajouter_carrousel() {   
 
+        for (const elmImg of elmGalerie__img) {
+            ajouter_img(elmImg) // ajoute l'image dans le carrousel                
+            ajouter_radio() // ajoute des radio bouton dans carrousel__form
+        }      
+          
         elmCarrousel__figure.children[0].classList.add('carrousel__img--activer')
     }
 

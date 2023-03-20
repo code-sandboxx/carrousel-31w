@@ -3,15 +3,20 @@
 /*Le conteneur principale du carrousel */
 .carrousel{
     position: fixed;
-    width: 50%;
-    height: 50%;
-    top: 25%;
-    left: 25%;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
     transform: scale(0);
     transition: transform .5s;
     background-color: beige;
     z-index: 5;
-
+    @media screen and (min-width: 500px){
+        width: 50%;
+        height: 50%;
+        top: 25%;
+        left: 25%;
+    }
 }
 
 .carrousel--ouvrir{
@@ -19,8 +24,15 @@
 }
 
 /* Bouton de fermeture de la boite modale */
-.bouton__x{
-
+.bouton__x{ // a formatter!
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    z-index: 10;
 }
 
 /* Conteneur des images carrousel */
@@ -31,6 +43,7 @@
 }
 
 .carrousel__img{
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -47,6 +60,19 @@
 
 /* Conteneur des boutons radio */
 .carrousel__form{
-
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    z-index: 12;
 }
+
+.wp-block-gallery-1, .wp-block-image img{
+    border-radius: 10px;
+}
+
+
 
