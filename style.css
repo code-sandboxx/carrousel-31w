@@ -73,4 +73,18 @@
 
 .wp-block-gallery-1, .wp-block-image img {
   border-radius: 10px;
+}
+
+.flechePrecedent {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flecheSuivant {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */
