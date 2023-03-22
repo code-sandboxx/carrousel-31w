@@ -11,6 +11,7 @@
     transition: transform .5s;
     background-color: beige;
     z-index: 5;
+    border-radius: 5px;
     @media screen and (min-width: 500px){
         width: 50%;
         height: 50%;
@@ -21,6 +22,7 @@
 
 .carrousel--ouvrir{
     transform: scale(1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /* Bouton de fermeture de la boite modale */
@@ -28,9 +30,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid grey;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(163, 110, 110);
+    background-color: rgb(215, 160, 160);
     border-radius: 5px;
     z-index: 10;
 }
@@ -40,6 +43,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    border-radius: 5px;
 }
 
 .carrousel__img{
@@ -52,6 +56,7 @@
     opacity: 0;
     transition: opacity .5s;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .carrousel__img--activer{
