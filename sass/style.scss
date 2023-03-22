@@ -13,10 +13,10 @@
     z-index: 5;
     border-radius: 5px;
     @media screen and (min-width: 500px){
-        width: 50%;
-        height: 50%;
-        top: 25%;
-        left: 25%;
+        width: 75%;
+        height: 75%;
+        top: 15%;
+        left: 12%;
     }
 }
 
@@ -30,10 +30,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgb(163, 110, 110);
-    background-color: rgb(215, 160, 160);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color:  rgb(252, 216, 194);
     border-radius: 5px;
     z-index: 10;
 }
@@ -43,7 +43,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    border-radius: 5px;
+    border-radius: 5px;   
 }
 
 .carrousel__img{
@@ -76,7 +76,14 @@
 }
 
 .wp-block-gallery-1, .wp-block-image img{
+    border-radius: 10px;    
+}
+
+.wp-block-image img{
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .flechePrecedent{
@@ -84,6 +91,10 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 5px;
+    height: 50px;
+    width: 40px;
+    background-color: rgb(169, 255, 226);
 }
 
 .flecheSuivant{
@@ -91,8 +102,12 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 5px;
+    height: 50px;
+    width: 40px;
+    background-color: rgb(169, 255, 226);
 }
 
-
-
-
+.flechePrecedent:hover, .flecheSuivant:hover{
+    background-color:  rgb(252, 216, 194);
+}
