@@ -15,26 +15,30 @@
     let index = 0;
     let index__precedent = -1;  
   
-    elmBouton__x.addEventListener('mousedown', function(){       
-        elmCarrousel.classList.remove('carrousel--ouvrir')       
+    elmBouton__x.addEventListener('mousedown', function(){              
+        elmCarrousel.parentNode.removeChild(elmCarrousel);      
     })
 
-    elmGalerie.addEventListener("click", function(){    
-        elmCarrousel.classList.add('carrousel--ouvrir')         
-        if(elmCarrousel__form .length == 0){     
-            ajouter_carrousel();      
-        } 
-        if (indexImgActive == 0){
-            precedent.disabled = true;
-        }
-        if (indexImgActive == elmCarrousel__figure.children.length){
-            suivant.disabled = true;
-        }
-        let selector = `input[name="radCarrousel"][data-index="${indexImgActive}"]`;
-        let radioBtn = document.querySelector(selector);
-        radioBtn.checked = true;       
-    })
+    for (let index = 0; index < elmGalerie__img.length; index++) {
 
+        elmGalerie__img[index].addEventListener('click', function(){
+          
+            elmCarrousel.classList.add('carrousel--ouvrir')         
+           // if(elmCarrousel__form.length == 0){     
+               ajouter_carrousel(index);      
+            //}  
+            if (index == 0){
+                precedent.disabled = true;
+            }
+            if (index == elmCarrousel__figure.children.length){
+                suivant.disabled = true;
+            }
+            let selector = `input[name="radCarrousel"][data-index="${index}"]`;
+            let radioBtn = document.querySelector(selector);
+            radioBtn.checked = true;  
+        })           
+    }
+ 
     suivant.addEventListener('click', function(){     
         let selector = `input[name="radCarrousel"][data-index="${indexImgActive + 1}"]`;
         if (indexImgActive < elmCarrousel__figure.children.length - 1){
@@ -68,12 +72,14 @@
 
     //****************************************************************** */
 
-    function ajouter_carrousel() {   
+    function ajouter_carrousel(index) {  
+        let imageActiveActuelle = document.querySelector('.carrousel__img--activer')
+        if(imageActiveActuelle) imageActiveActuelle.classList.remove('carrousel__img--activer') 
         for (const elmImg of elmGalerie__img) {
             ajouter_img(elmImg) // ajoute l'image dans le carrousel                
             ajouter_radio() // ajoute des radio bouton dans carrousel__form
         }  
-        elmCarrousel__figure.children[0].classList.add('carrousel__img--activer')
+        elmCarrousel__figure.children[index].classList.add('carrousel__img--activer')
     }
 
     //****************************************************************** */

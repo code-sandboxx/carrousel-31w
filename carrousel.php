@@ -33,12 +33,13 @@ add_action('wp_enqueue_scripts', 'carrousel_enqueue');
 
 function creation_carrousel(){
 
-    return '<div class="carrousel">
-        <button class="bouton__x">X</button>
-        <figure class="carrousel__figure"></figure>
-        <button class="flechePrecedent"><</button>
-        <button class="flecheSuivant">></button>
-        <form class="carrousel__form"></form>
+    return '        
+        <div class="carrousel">
+            <button class="bouton__x">X</button>
+            <figure class="carrousel__figure"></figure>
+            <button class="flechePrecedent"><</button>
+            <button class="flecheSuivant">></button>
+            <form class="carrousel__form"></form>
         </div>';
 }    
 

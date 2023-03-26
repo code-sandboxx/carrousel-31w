@@ -111,3 +111,18 @@
 .flechePrecedent:hover, .flecheSuivant:hover{
     background-color:  rgb(252, 216, 194);
 }
+
+.galerie figure{
+    transition: 0.3s;
+}
+
+.galerie figure:hover{
+    transform: scale(1.1);
+    background: rgba(203, 249, 183, 0.7);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    z-index: 10;
+}
