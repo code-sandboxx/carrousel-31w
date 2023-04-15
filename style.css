@@ -12,6 +12,7 @@ Text Domain: carrousel
 /* La feuille de style du carrousel*/
 /*Le conteneur principale du carrousel */
 .carrousel {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -33,6 +34,7 @@ Text Domain: carrousel
 }
 
 .carrousel--ouvrir {
+  display: block;
   transform: scale(1);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
