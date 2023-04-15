@@ -1,3 +1,14 @@
+/*
+Plugin Name: Carrousel
+Plugin URI: https://github.com/code-sandboxx/carrousel-31w/tree/tp2
+Description: Le plugin WordPress qui permet l'affichage le carrousel d'images
+Version: 1.0.0
+Author: Olena
+Author URI: https://github.com/code-sandboxx/carrousel-31w/tree/tp2
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+Text Domain: carrousel
+*/
 /* La feuille de style du carrousel*/
 /*Le conteneur principale du carrousel */
 .carrousel {
