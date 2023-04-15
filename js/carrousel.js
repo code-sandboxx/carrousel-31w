@@ -5,7 +5,7 @@
     let elmBouton__x = document.querySelector('.bouton__x');
     let suivant = document.querySelector('.flecheSuivant');
     let precedent = document.querySelector('.flechePrecedent');
-    //console.log(bouton__ouvrir.tagName);
+    
     let elmGalerie = document.querySelector('.galerie');
     let elmGalerie__img = elmGalerie.querySelectorAll('img'); // images de la galerie
     let elmCarrousel__figure = document.querySelector('.carrousel__figure'); // conteneur des images
@@ -14,7 +14,7 @@
     let indexImgActive = 0;    
     let index = 0;
     let index__precedent = -1;  
-  
+    
     elmBouton__x.addEventListener('mousedown', function(){       
         elmCarrousel.classList.remove('carrousel--ouvrir')       
     })
